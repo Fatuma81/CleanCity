@@ -38,6 +38,17 @@ Initial bugs identified
 - the alreaday have an account log in here  in the registration does not redirect to  login - UI/UX bug
 - the navigation panel at the top covers response thus user has to keep scrolling to the top to see response - UI/UX bug
 
+Jira Setup & Workflow
+
+A Jira project board was created for tracking bugs, test-related tasks, and milestones.
+Team members were invited and assigned roles:
+QA Lead: Fatuma Abdi
+Testers: Francisca Obiero, Stanley Mwangi
+Tasks are organized using To Do → In Progress → Done workflow.
+Each defect found during testing is optionally logged both in:
+tests/defect-log.md (for submission)
+Jira (for team collaboration and real-time updates)
+
 4. Team member roles and responsibilities documented
 Fatuma Abdi – group leader: Writes test plan,records early issues
 francisca obiero - identify early issues
@@ -46,4 +57,18 @@ stanley mwangi - test the app functionality
 there was no initial scripts 
 but we created a test-environment.md file 
 
+ Testing Focus Areas
+We must test 
+
+1. Home Page
+2. Dashboard Page
+3. Feedback Page
+4. Admin Panel
+5. Awareness Page
+
+Goals for Week 2
+- Begin designing and executing test cases
+- Track bugs formally using a defect log
+- Start writing neccessary testing scripts
+- Update the test plan to reflect progress from Week 1 to Week 2
 

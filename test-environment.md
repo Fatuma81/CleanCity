@@ -4,8 +4,11 @@
 **Prepared By:** The Debugger  
 **Created On:** July 2, 2025  
 **Purpose:** To define the testing environment setup for the CleanCity QA process.
+1. devices used
+- windows 10 desktop
+- android device
 
-1. Browsers Used
+2. Browsers Used
 --------------------------------
 The following browsers were used for testing:
 - Google Chrome (latest version)
@@ -38,6 +41,9 @@ The following browsers were used for testing:
 - VS Code
 - Live Server Extension for real-time reload
 more tools get added on in week two and three
+
+  Jira
+ - Issue tracking and defect management platform
 
 6. Test Data
 
