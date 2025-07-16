@@ -1,0 +1,143 @@
+**Project Name:** CleanCity waste pickup Scheduler
+**Team Name:** The Debbuggers
+**Duration Covered:** 3 Week
+**Date:** July 15, 2025
+
+---
+
+## 1. Project Overview
+
+The CleanCity Waste Pickup Scheduler is a web-based application that enables residents to request waste collection, provide feedback, and manage user access through an admin dashboard. The QA team was responsible for verifying functionality, detecting bugs, and ensuring reliability through a three-week testing cycle.
+
+---
+
+## 2. Testing Methodology
+
+In Week 1, we began by analyzing project requirements, identifying test risks, and creating test cases for core functions.
+In Week 2, we implemented unit and integration tests using the Jest framework, incorporating mocks for browser APIs such as `localStorage`.
+In Week 3, we finalized the test suite, fixed module import errors, validated edge case handling, and documented results via a presentation and video summary.
+Our approach followed the Software Testing Life Cycle (STLC) with a mix of white-box and black-box strategies.
+
+---
+
+## 3. Modules Tested
+
+The following key functions were tested:
+
+* `deleteUser`: Removes a user from the localStorage database based on ID.
+* `getAllUsers`: Retrieves a list of all stored users.
+* `logout`: Simulates a user logout by clearing their session.
+* `isAdmin`: Checks if the current user has admin privileges.
+* `clearAllData`: Clears all CleanCity-related data from localStorage.
+* `filterRequestsByStatus`: Filters waste pickup requests by their status (pending, completed, etc).
+
+---
+
+## 4. Test Execution Summary
+
+Across the test suite, we executed over 20 test cases.
+Unit tests were focused on logic correctness. Integration tests ensured interaction between localStorage and service functions. System testing covered admin dashboard behavior and data handling.
+
+Out of 22 total tests, 20 passed and 2 initially failed due to issues with return values and incorrect file paths. All failures were resolved by Week 3.
+
+---
+
+## 5. Key Defects Identified
+
+Several issues were discovered:
+
+* The `isAdmin` function returned `null` instead of `false` when given an invalid user, causing a test failure. This was corrected with a fallback return value.
+* Test files like `logout.test.js` and `clearAllData.test.js` failed to import their modules due to incorrect relative paths. These were corrected by specifying full file paths and extensions.
+* Some test files lacked proper `localStorage` mocking, leading to runtime issues during early test runs. Mocking functions were added.
+* Inconsistent naming conventions between modules and test files made the test suite fragile. Renaming and structure cleanup solved this.
+
+---
+
+## 6. Recommendations
+
+### Functional Improvements
+
+* **Enhance Form Validation:**
+  Ensure all fields (e.g., preferredDate, comments) are properly validated.
+  Implement strong password rules (length, complexity).
+  Replace basic email checks with regex-based validation.
+
+* **Fix Filtering Bugs:**
+  Correct location-specific filtering issues (e.g., Eldoret showing Nairobi data).
+  Ensure status/location filters reflect true data conditions.
+
+### Security Improvements
+
+* **Implement Password Hashing:**
+  Use secure hashing algorithms like `bcrypt` to store encrypted passwords.
+
+* **Avoid Storing Sensitive Data in localStorage:**
+  Replace localStorage for session/auth data with HTTP-only cookies or token-based storage (e.g., JWT).
+
+* **Enforce Authorization Checks:**
+  Validate user permissions when accessing admin routes or modifying data.
+
+* **Input Sanitization:**
+  Prevent script injection (XSS) by sanitizing user inputs across all forms and display elements.
+
+### UI/UX Improvements
+
+* **Improve Navigation and Layout:**
+  Add sticky navigation and scroll-to-top functionality.
+  Make success and error messages visually clear and accessible.
+
+* **Provide Real-Time Feedback:**
+  Add loaders or indicators during form submission.
+  Confirm actions visually or via popups.
+
+* **Accessibility Enhancements:**
+  Include alt text for all images and icons.
+  Use semantic HTML and ARIA roles for screen reader compatibility.
+  Ensure full keyboard navigation support.
+
+### Responsiveness and Compatibility
+
+* **Improve Mobile Responsiveness:**
+  Use responsive grids and media queries for a better small-screen experience.
+
+* **Cross-Browser Testing:**
+  Validate layout and behavior across Chrome, Firefox, Safari, and Edge.
+
+### Performance and Scalability
+
+* **Optimize Large Data Displays:**
+  Paginate or lazily load long lists of requests and feedback.
+
+* **Move Beyond localStorage:**
+  Transition to scalable cloud solutions like Supabase, Firebase, or a custom API backend.
+
+### Testing and Development Workflow
+
+* **Increase Test Coverage:**
+  Write additional unit and integration tests for edge cases using Jest.
+
+* **Adopt Continuous Integration:**
+  Use GitHub Actions or similar tools to auto-run tests on pull requests.
+
+* **Enforce Code Quality:**
+  Integrate ESLint and Prettier to maintain readable, consistent, and clean code.
+
+---
+
+## 7. Reflection and Lessons Learned
+
+Throughout the three weeks, we learned the importance of proper test structure, modular code design, and environment setup.
+Failing tests due to file structure and import issues highlighted the need for careful naming and directory organization.
+Risk-based test planning helped us focus on the most critical functions first, resulting in effective use of time and effort.
+Modularizing the application logic greatly improved testing efficiency and maintainability.
+
+---
+
+## 8. Deliverables
+
+* Jest test suites for each service
+* Manual and automated test case documentation
+* Bug report summary
+* Final 5-minute narrated video presentation
+* Slide deck for presentation (5 slides)
+
