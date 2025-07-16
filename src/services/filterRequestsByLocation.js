@@ -1,11 +1,10 @@
 // filterRequestsByLocation.js
-function filterRequestsByLocation(location) {
-  const dataKey = 'cleancity_pickup_requests';
-  const requests = JSON.parse(localStorage.getItem(dataKey)) || [];
+function filterRequestsByLocation(requests, location) {
   return requests.filter(r => r.location === location);
 }
 
 module.exports = filterRequestsByLocation;
+
 
 // This function filters pickup requests by location from localStorage
 

@@ -1,10 +1,12 @@
-// logout.js
+
+// src/services/logout.js
+
 function logout() {
-  localStorage.removeItem('currentUser');
-  return true;
+  localStorage.removeItem('cleancity_logged_in_user');
 }
 
 module.exports = logout;
+
 
 // This function removes the currentUser session from localStorage
 

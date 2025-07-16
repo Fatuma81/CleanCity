@@ -1,8 +1,8 @@
-// isAdmin.js
-function isAdmin() {
-  const data = localStorage.getItem('currentUser');
-  const user = data ? JSON.parse(data) : null;
-  return user?.role === 'admin';
+// src/services/isAdmin.js
+
+function isAdmin(user) {
+  if (!user || typeof user !== 'object') return false;
+  return user.role === 'admin';
 }
 
 module.exports = isAdmin;

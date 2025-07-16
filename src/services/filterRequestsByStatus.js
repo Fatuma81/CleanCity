@@ -1,11 +1,10 @@
 // filterRequestsByStatus.js
-function filterRequestsByStatus(status) {
-  const dataKey = 'cleancity_pickup_requests';
-  const requests = JSON.parse(localStorage.getItem(dataKey)) || [];
+function filterRequestsByStatus(requests, status) {
   return requests.filter(r => r.status === status);
 }
 
 module.exports = filterRequestsByStatus;
+
 
 // This function filters pickup requests from localStorage based on status
 

@@ -1,5 +1,5 @@
 // clearAllData.test.js
-const clearAllData = require('./clearAllData');
+const clearAllData = require('../clearAllData');
 
 describe('clearAllData', () => {
   beforeEach(() => {
