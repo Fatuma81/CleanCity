@@ -19,7 +19,7 @@
  **Actual Result:** Registration successful
  **Status:** Pass
 
----
+------
 
  TC02 – Register with Short Password
 
