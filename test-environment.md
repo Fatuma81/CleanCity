@@ -44,6 +44,8 @@ more tools get added on in week two and three
 
   Jira
  - Issue tracking and defect management platform
+  jest
+ - to do automated testing
 
 6. Test Data
 
